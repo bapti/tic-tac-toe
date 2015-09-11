@@ -1,9 +1,11 @@
-﻿namespace TicTacToe.Game
+﻿using TicTacToe.Game.Player;
+
+namespace TicTacToe.Game
 {
     public interface IGameResult
     {
         bool IsDraw { get; }
-        IPlayer Winner { get; }
-        IPlayer Loser { get; }
+        ITicTacToePlayer Winner { get; }
+        ITicTacToePlayer Loser { get; }
     }
 }

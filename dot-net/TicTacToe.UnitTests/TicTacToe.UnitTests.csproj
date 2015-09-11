@@ -66,6 +66,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game\Board\TicTacToeGameBoardTests.cs" />
+    <Compile Include="Game\GameJudge\TicTacToeGameJudgeTests.cs" />
+    <Compile Include="Game\Player\RandonComputerPlayerTests.cs" />
     <Compile Include="Game\TicTacToeGameTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

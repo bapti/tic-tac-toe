@@ -42,12 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\TicTacToeConsoleApp.cs" />
-    <Compile Include="Game\IBoard.cs" />
+    <Compile Include="Game\Board\TicTacToeBoard.cs" />
     <Compile Include="Game\IGame.cs" />
-    <Compile Include="Game\IGameJudge.cs" />
+    <Compile Include="Game\Judge\IGameJudge.cs" />
     <Compile Include="Game\IGameRenderer.cs" />
     <Compile Include="Game\IGameResult.cs" />
-    <Compile Include="Game\IPlayer.cs" />
+    <Compile Include="Game\Judge\TicTacToeGameJudge.cs" />
+    <Compile Include="Game\Player\ITicTacToePlayer.cs" />
+    <Compile Include="Game\Utils\IRandomNumberPicker.cs" />
+    <Compile Include="Game\Player\RandomComputerTicTacToePlayer.cs" />
     <Compile Include="Game\TicTacToeGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
