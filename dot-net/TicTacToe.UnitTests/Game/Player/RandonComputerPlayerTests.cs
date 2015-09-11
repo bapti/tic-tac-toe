@@ -23,7 +23,7 @@ namespace TicTacToe.UnitTests.Game.Player
         {
             Board = Substitute.For<ITicTacToeBoard>();
             NumberPicker = Substitute.For<IRandomNumberPicker>();
-            Sut = new RandomComputerTicTacToePlayer(TicTacToePiece.O, NumberPicker);
+            Sut = new RandomComputerTicTacToePlayer(TicTacToePiece.O, NumberPicker, "Jim");
 
             Board.Cells().Returns(new TicTacToePiece[3, 3]);
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TicTacToe.Game.Board;
 using TicTacToe.Game.Judge;
 using TicTacToe.Game.Player;
+using TicTacToe.Game.Utils;
 
 namespace TicTacToe.Game
 {
@@ -17,6 +18,7 @@ namespace TicTacToe.Game
         private readonly ITicTacToePlayer _player2;
         private readonly IGameJudge _gameJudge;
         private readonly IGameRenderer _gameRenderer;
+        private readonly IGamePauser _gamePauser;
         private ITicTacToePlayer _lastTicTacToePlayerToPlay;
 
         public TicTacToeGame(
@@ -24,7 +26,8 @@ namespace TicTacToe.Game
             ITicTacToePlayer player1,
             ITicTacToePlayer player2,
             IGameJudge gameJudge,
-            IGameRenderer gameRenderer
+            IGameRenderer gameRenderer,
+            IGamePauser gamePauser
             )
         {
             _ticTacToeBoard = ticTacToeBoard;
@@ -32,6 +35,7 @@ namespace TicTacToe.Game
             _player2 = player2;
             _gameJudge = gameJudge;
             _gameRenderer = gameRenderer;
+            _gamePauser = gamePauser;
         }
 
         public void Play()
@@ -41,6 +45,7 @@ namespace TicTacToe.Game
 
             while (_gameJudge.IsGameInPlay(_ticTacToeBoard))
             {
+                _gamePauser.Pause();
                 var player = GetNextPlayer();
 
                 player.TakeTurn(_ticTacToeBoard);

@@ -45,7 +45,7 @@ namespace TicTacToe.Game.Judge
                 };
             }
 
-            var vertical = IsWinOnHorizontal(cells);
+            var vertical = IsWinOnVertical(cells);
             if (vertical != TicTacToePiece.None)
             {
                 return new TicTacToeGameResult()

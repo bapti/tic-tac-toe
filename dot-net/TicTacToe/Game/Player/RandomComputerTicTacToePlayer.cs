@@ -11,16 +11,20 @@ namespace TicTacToe.Game.Player
     {
         private readonly TicTacToePiece _piece;
         private readonly IRandomNumberPicker _numberPicker;
+        private readonly string _name;
 
         public RandomComputerTicTacToePlayer(
             TicTacToePiece piece,
-            IRandomNumberPicker numberPicker
+            IRandomNumberPicker numberPicker,
+            string name
             )
         {
             _piece = piece;
             _numberPicker = numberPicker;
+            Name = name;
         }
 
+        public string Name { get; private set; }
         public TicTacToePiece Piece { get { return _piece; } }
 
         public void TakeTurn(ITicTacToeBoard ticTacToeBoard)

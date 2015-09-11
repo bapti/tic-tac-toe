@@ -5,6 +5,7 @@ using TicTacToe.Game;
 using TicTacToe.Game.Board;
 using TicTacToe.Game.Judge;
 using TicTacToe.Game.Player;
+using TicTacToe.Game.Utils;
 using Xunit;
 
 namespace TicTacToe.UnitTests.Game
@@ -17,6 +18,7 @@ namespace TicTacToe.UnitTests.Game
         public ITicTacToePlayer Player2;
         public IGameJudge GameJudge;
         public IGameRenderer GameRenderer;
+        public IGamePauser GamePauser;
 
         public TicTacToeGameTests()
         {
@@ -25,9 +27,15 @@ namespace TicTacToe.UnitTests.Game
             Player2 = Substitute.For<ITicTacToePlayer>();
             GameJudge = Substitute.For<IGameJudge>();
             GameRenderer = Substitute.For<IGameRenderer>();
+            GamePauser = Substitute.For<IGamePauser>();
 
             Sut = new TicTacToeGame(
-                TicTacToeBoard,Player1,Player2,GameJudge,GameRenderer
+                TicTacToeBoard,
+                Player1,
+                Player2,
+                GameJudge,
+                GameRenderer, 
+                GamePauser
                 );
         }
 

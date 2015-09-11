@@ -1,4 +1,4 @@
-﻿using TicTacToe.Game.Player;
+using TicTacToe.Game.Player;
 
 namespace TicTacToe.Game
 {

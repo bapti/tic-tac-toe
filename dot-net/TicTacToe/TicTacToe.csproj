@@ -43,15 +43,17 @@
   <ItemGroup>
     <Compile Include="App\TicTacToeConsoleApp.cs" />
     <Compile Include="Game\Board\TicTacToeBoard.cs" />
+    <Compile Include="Game\ConsoleRenderer\ConsoleRenderer.cs" />
     <Compile Include="Game\IGame.cs" />
+    <Compile Include="Game\TicTacToeGameResult.cs" />
+    <Compile Include="Game\Utils\GamePauser.cs" />
     <Compile Include="Game\Judge\IGameJudge.cs" />
-    <Compile Include="Game\IGameRenderer.cs" />
-    <Compile Include="Game\IGameResult.cs" />
+    <Compile Include="Game\ConsoleRenderer\IGameRenderer.cs" />
     <Compile Include="Game\Judge\TicTacToeGameJudge.cs" />
     <Compile Include="Game\Player\ITicTacToePlayer.cs" />
-    <Compile Include="Game\Utils\IRandomNumberPicker.cs" />
     <Compile Include="Game\Player\RandomComputerTicTacToePlayer.cs" />
     <Compile Include="Game\TicTacToeGame.cs" />
+    <Compile Include="Game\Utils\RandomNumberPicker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
