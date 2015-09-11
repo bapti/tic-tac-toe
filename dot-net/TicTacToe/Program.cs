@@ -7,10 +7,10 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            var consoleApp = new TicTacToeConsoleApp(
-                new TicTacToeGame()
-                );
-            consoleApp.Start();
+            //var consoleApp = new TicTacToeConsoleApp(
+            //    new TicTacToeGame()
+            //    );
+            //consoleApp.Start();
         }
     }
 }

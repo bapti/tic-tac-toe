@@ -25,7 +25,7 @@ namespace TicTacToe.App
 
             while (true)
             {
-                game.PlayRound();
+                game.Play();
 
                 Console.WriteLine("");
                 Console.WriteLine("");
