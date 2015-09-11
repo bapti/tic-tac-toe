@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\TicTacToeConsoleApp.cs" />
+    <Compile Include="Game\IGame.cs" />
+    <Compile Include="Game\TicTacToeGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

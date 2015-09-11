@@ -1,4 +1,5 @@
 ﻿using TicTacToe.App;
+using TicTacToe.Game;
 
 namespace TicTacToe
 {
@@ -6,7 +7,9 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            var consoleApp = new TicTacToeConsoleApp();
+            var consoleApp = new TicTacToeConsoleApp(
+                new TicTacToeGame()
+                );
             consoleApp.Start();
         }
     }
