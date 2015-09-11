@@ -21,6 +21,8 @@ namespace TicTacToe.Game.Player
             _numberPicker = numberPicker;
         }
 
+        public TicTacToePiece Piece { get { return _piece; } }
+
         public void TakeTurn(ITicTacToeBoard ticTacToeBoard)
         {
             TicTacToePiece[,] cells = ticTacToeBoard.Cells();

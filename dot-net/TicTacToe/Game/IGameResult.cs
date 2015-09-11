@@ -8,4 +8,12 @@ namespace TicTacToe.Game
         ITicTacToePlayer Winner { get; }
         ITicTacToePlayer Loser { get; }
     }
+
+    public class TicTacToeGameResult
+        : IGameResult
+    {
+        public bool IsDraw { get; set; }
+        public ITicTacToePlayer Winner { get; set; }
+        public ITicTacToePlayer Loser { get; set; }
+    }
 }
